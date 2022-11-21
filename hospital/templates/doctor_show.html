@@ -1,0 +1,35 @@
+{% extends 'base_clinic.html' %}
+
+{% block content %}
+            <div class="M_box">
+            <div class="M_box_part"
+                 style="flex-direction: column; justify-content: start; align-items: center; padding-bottom: 10%">
+                <p style="font-size:xx-large">{{ object_listD.rang }} st. Andrew hospital </p>
+                <br>
+                <img class="Img" a src="{{ object_listD.photo }}">
+                <br>
+                <p style="font-size:Xxx-large">{{ object_listD.first_name }} {{ object_listD.last_name }}</p>
+
+            </div>
+            <div class="M_box_part2" style="flex-direction: column;font-size:Xx-large; justify-content: flex-start">
+                <p style="">Education: </p>
+                <br>
+                {% for edu in  object_listD.education.all %}
+                    <ul>
+                        <li type="disc">{{ edu }}
+                        </li>
+                    </ul>
+                    <br>
+                {% endfor %}
+                <p>Work experience(years): </p>
+                <br>
+                <p>{{ object_listD.experience }}  </p>
+                <br>
+                <p>Email: </p>
+                <br>
+                <p>{{ object_listD.email }} </p>
+                <br>
+                <p>{{ object_listD.date_of_birth }} </p>
+            </div>
+
+{% endblock %}

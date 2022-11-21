@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<div class="Background">
+    <div class="Header">
+        <div class="H_Bigbox"><a href="http://127.0.0.1:8000" class="link_undecor" style="color: #21D189">st. Andrew hospital</div>
+        <div class="H_Smalbox">
+            <div class="HS_box"><a href="http://127.0.0.1:8000/main_doctor" class="link_undecor">Main Doctor</a></div>
+            <div class="HS_box"><a href="http://127.0.0.1:8000/departments" class="link_undecor">Departments</a></div>
+            <div class="HS_box"><a href="http://127.0.0.1:8000/doctors" class="link_undecor">Doctors</a></div>
+            <div class="HS_box"><a href="http://127.0.0.1:8000/contacts" class="link_undecor">Contacts</a></div>
+        </div>
+    </div>
+    <div class="Main">
+        {% block content %}
+            <div class="M_box">
+                <div class="M_box_part">
+
+                    <p style="font-size: large"><img height="500" class="Img" src="../static/img/doctors.webp">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+
+                        Amet aliquam id diam maecenas. Dignissim suspendisse in est ante in nibh mauris. Eu tincidunt
+                        tortor
+                        aliquam nulla facilisi cras fermentum odio. Gravida cum sociis natoque penatibus et magnis.
+                        Nulla
+                        pellentesque dignissim enim sit amet venenatis urna cursus. Nulla aliquet porttitor lacus luctus
+                        accumsan tortor posuere ac. Venenatis urna cursus eget nunc. Dolor sit amet consectetur
+                        adipiscing
+                        elit pellentesque habitant morbi tristique. Consectetur purus ut faucibus pulvinar elementum. At
+                        imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Integer enim neque volutpat ac
+                        tincidunt vitae. Aliquam id diam maecenas ultricies mi eget mauris. Netus et malesuada fames ac
+                        turpis egestas maecenas pharetra convallis. Euismod nisi porta lorem mollis aliquam ut porttitor
+                        leo
+                        a. Sagittis vitae et leo duis. Quam id leo in vitae. Massa id neque aliquam vestibulum morbi
+                        blandit
+                        cursus risus. Dolor purus non enim praesent elementum facilisis leo vel.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+
+                        Amet aliquam id dia
+                    </p>
+                </div>
+                <div class="M_box_part2">
+
+                    <p style="font-size: large">
+                        <img class="Img1" src="../static/img/hospital.jpg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+
+
+                        Amet aliquam id dia
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+                        Amet aliquam id diam maecenas. Dignissim suspendisse in est ante in nibh mauris. Eu tincidunt
+                        tortor
+                        aliquam nulla facilisi cras fermentum odio. Gravida cum sociis natoque penatibus et magnis.
+                        Nulla
+                        pellentesque dignissim enim sit amet venenatis urna cursus. Nulla aliquet porttitor lacus luctus
+                        accumsan tortor posuere ac. Venenatis urna cursus eget nunc. Dolor sit amet consectetur
+                        adipiscing
+                        elit pellentesque habitant morbi tristique. Consectetur purus ut faucibus pulvinar elementum. At
+                        imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Integer enim neque volutpat ac
+                        tincidunt vitae. Aliquam id diam maecenas ultricies mi eget mauris. Netus et malesuada fames ac
+                        turpis egestas maecenas pharetra convallis. Euismod nisi porta lorem mollis aliquam ut porttitor
+                        leo
+                        a. Sagittis vitae et leo duis. Quam id leo in vitae. Massa id neque aliquam vestibulum morbi
+                        blandit
+                        cursus risus. Dolor purus non enim praesent elementum facilisis leo vel.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ac turpis egestas integer eget aliquet nibh praesent tristique magna.
+                        Rhoncus mattis rhoncus urna neque. Dignissim convallis aenean et tortor at risus viverra
+                        adipiscing.
+                        Tellus orci ac auctor augue mauris augue neque. Semper risus in hendrerit gravida. Turpis
+                        egestas
+                        sed tempus urna et pharetra pharetra massa. Morbi tempus iaculis urna id. Posuere sollicitudin
+                        aliquam ultrices sagittis orci. Nisl tincidunt eget nullam non nisi est. Turpis egestas sed
+                        tempus
+                        urna et pharetra. Scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean
+                        euismod elementum. Augue interdum velit euismod in. Consequat mauris nunc congue nisi vitae.
+                        Vitae
+                        congue eu consequat ac felis donec. Et odio pellentesque diam volutpat commodo sed egestas
+                        egestas
+                        fringilla. Est velit egestas dui id ornare arcu odio ut.
+
+                    </p>
+
+
+                </div>
+            </div>
+        {% endblock content %}
+
+    </div>
+</div>
+
+</body>
+</html>

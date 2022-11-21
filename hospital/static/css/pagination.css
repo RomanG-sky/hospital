@@ -1,0 +1,34 @@
+.pagination{
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  color: black;
+  font-family: "Bebas Neue";
+  font-size:  xx-large;
+}
+.doc_info {
+   width: 250px;
+    height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  justify-content: center;
+  color: black;
+  font-family: "Bebas Neue";
+  font-size: xx-large;
+
+}
+.block_doc{
+  padding-top: 3%;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}

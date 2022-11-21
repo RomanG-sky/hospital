@@ -1,0 +1,10 @@
+{% extends 'base_clinic.html' %}
+
+{% block content %}
+    {% for medic in objectM%}
+        <ul>
+            <li ><p style="font-family: 'Bebas Neue'; font-size: xx-large"> <a href="{{ medic.get_absolute_url }}">{{ medic }}</a> </p></li>
+        </ul>
+
+        {% endfor %}
+{% endblock %}

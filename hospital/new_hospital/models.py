@@ -72,6 +72,7 @@ class Hospital(models.Model):
     cabinet = models.TextField(max_length=5, default=111)
     description = models.CharField(max_length=100, blank=True,
                                    help_text='Information about doctor')
-
+    class Meta:
+        ordering = ('doctor',)
     def __str__(self):
         return f'{self.doctor.rang, self.doctor.last_name} added to  {self.hospital_department.all()}  '

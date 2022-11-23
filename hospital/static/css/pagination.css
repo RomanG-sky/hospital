@@ -11,8 +11,8 @@
   font-size:  xx-large;
 }
 .doc_info {
-   width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,4 +31,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+
+}
+
+.Sortbox{
+    height: 10%;
+    width:  100%;
+    position: relative;
+    display: flex;
+  font-family: "Bebas Neue";
+    font-size: large;
+    font-weight: bold;
+
 }

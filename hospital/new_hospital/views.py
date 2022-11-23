@@ -63,7 +63,6 @@ def m_doctor_page(request):
 
 def all_doctors(request):
     queryset2 = Hospital.objects.all()
-    queryset = Doctor.objects.all()
     paginator = Paginator(queryset2, 2)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -71,14 +70,58 @@ def all_doctors(request):
     context = {
         'title': 'Doctors',
         'object': page_obj,
-        'objectD': queryset,
+    }
+    return render(request, 'doctors.html', context)
 
+def all_doctors_exp3andmore(request):
+    queryset2 = Hospital.objects.filter(doctor__experience__range=['3','100'])
+    paginator = Paginator(queryset2, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+    }
+    return render(request, 'doctors.html', context)
+
+def all_doctors_explessthan3(request):
+    queryset2 = Hospital.objects.filter(doctor__experience__range=['0','3'])
+    paginator = Paginator(queryset2, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+    }
+    return render(request, 'doctors.html', context)
+
+def all_doctors_bybd(request):
+    queryset2 = Hospital.objects.order_by('doctor__date_of_birth')
+    paginator = Paginator(queryset2, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+    }
+    return render(request, 'doctors.html', context)
+
+def all_doctors_by_dep(request):
+    queryset2 = Hospital.objects.order_by('hospital_department__hospital__hospital_department')
+    paginator = Paginator(queryset2, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
     }
     return render(request, 'doctors.html', context)
 
 
-
-#
 # def author_add(request):
 #     form = AuthorForm(request.POST  or None)
 #

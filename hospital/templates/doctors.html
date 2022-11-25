@@ -1,53 +1,36 @@
 {% extends 'base_clinic.html' %}
 
 {% block content %}
-    <div class="Sortbox">
-        <div class="HS_box"><p><a class="link_undecor" href="http://127.0.0.1:8000/doctors/exp[0,3]">Doctors with
-            experience less than 3 year.</a>
-        </p>
-        </div>
-        <div class="HS_box"><p><a class="link_undecor" href="http://127.0.0.1:8000/doctors/exp[3,100]">Doctors with
-            experience more than 3 year.</a>
-        </p>
-        </div>
-        <div class="HS_box"><p><a class="link_undecor" href="http://127.0.0.1:8000/doctors/dep">Sort by hospital
-            department.</a>
-        </p>
-        </div>
-        <div class="HS_box"><p><a class="link_undecor" href="http://127.0.0.1:8000/doctors/birth">Sort by
-            doctor's birthday.</a>
-        </p>
-        </div>
-    </div>
     <div class="block_doc">
+
         {% for dc in object %}
             <div class="doc_info">
-                <ul>
-                    <li>
-                        <img src="{{ dc.doctor.photo }}">
-                    </li>
-                    <br>
-                    <li>
-                        <p style="font-family: 'Bebas Neue'; font-size: xx-large"><a class="link_undecor"
-                                                                                     href="{{ dc.doctor.get_absolute_url }}"> {{ dc.doctor.rang }} {{ dc.doctor.first_name }} {{ dc.doctor.last_name }}</a>
-                        </p>
+            <ul>
+                <li>
+                    <img src="{{ dc.doctor.photo }}">
+                </li>
+                <br>
+                <li>
+                    <p style="font-family: 'Bebas Neue'; font-size: xx-large"><a class="link_undecor"
+                            href="{{ dc.doctor.get_absolute_url }}"> {{ dc.doctor.rang }} {{ dc.doctor.first_name }} {{ dc.doctor.last_name }}</a>
+                    </p>
 
-                        {% for doc in dc.hospital_department.all %}
-                            <li>
-                                <p style="font-family: 'Bebas Neue'; font-size: xx-large">{{ doc }} </p>
-                            </li>
-                        {% endfor %}
-                    </li>
-                </ul>
-            </div>
+                    {% for doc in dc.hospital_department.all %}
+                        <li>
+                            <p style="font-family: 'Bebas Neue'; font-size: xx-large">{{ doc }} </p>
+                        </li>
+                    {% endfor %}
+                </li>
+            </ul>
+          </div>
         {% endfor %}
 
     </div>
     <div class="pagination">
     <span>
         {% if object.has_previous %}
-            <a class="link_undecor" href="?page=1">&laquo; first</a>
-            <a class="link_undecor" href="?page={{ object.previous_page_number }}">previous</a>
+            <a  class="link_undecor" href="?page=1">&laquo; first</a>
+            <a  class="link_undecor" href="?page={{ object.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">
@@ -65,4 +48,4 @@
     {% for dr in object %}
     {% endfor %}
 
-{% endblock content %}
+{% endblock %}

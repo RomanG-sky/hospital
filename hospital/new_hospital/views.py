@@ -62,21 +62,81 @@ def m_doctor_page(request):
 
 
 def all_doctors(request):
-    queryset2 = Hospital.objects.all()
-    queryset = Doctor.objects.all()
-    paginator = Paginator(queryset2, 2)
+    queryset = Hospital.objects.all()
+    paginator = Paginator(queryset, 2)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
     context = {
         'title': 'Doctors',
         'object': page_obj,
-        'objectD': queryset,
 
     }
     return render(request, 'doctors.html', context)
 
 
+def all_doctors_by_age(request):
+    queryset = Hospital.objects.order_by('doctor__date_of_birth')
+    paginator = Paginator(queryset, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+
+    }
+    return render(request, 'doctors.html', context)
+
+def all_doctors_by_sex(request):
+    queryset = Hospital.objects.order_by('-doctor__sex')
+    paginator = Paginator(queryset, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+
+    }
+    return render(request, 'doctors.html', context)
+def all_doctors_by_dep(request):
+    queryset = Hospital.objects.order_by('hospital_department')
+    paginator = Paginator(queryset, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+
+    }
+    return render(request, 'doctors.html', context)
+def all_doctors_by_exp_less_3(request):
+    queryset = Hospital.objects.filter(doctor__experience__range=['0','2'])
+    paginator = Paginator(queryset, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+
+    }
+    return render(request, 'doctors.html', context)
+
+def all_doctors_by_exp_more_3(request):
+    queryset = Hospital.objects.filter(doctor__experience__range=['3','99'])
+    paginator = Paginator(queryset, 2)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'title': 'Doctors',
+        'object': page_obj,
+
+    }
+    return render(request, 'doctors.html', context)
 
 #
 # def author_add(request):

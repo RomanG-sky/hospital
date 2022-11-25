@@ -1,36 +1,41 @@
 {% extends 'base_clinic.html' %}
 
 {% block content %}
+    <div class="Sorter">Select your filter:</div>
+    <div class="Sort_menu">
+        <div  class="HS_box"><a class="link_undecor" href="http://127.0.0.1:8000/doctors/by_exp_less_3"> - Experience less than 3 years</a></div>
+        <div class="HS_box"><a class="link_undecor" href="http://127.0.0.1:8000/doctors/by_exp_more_3"> - Experience more than 3 years</a></div>
+        <div class="HS_box"><a class="link_undecor" href="http://127.0.0.1:8000/doctors/by_department"> - By department</a></div>
+        <div class="HS_box"><a class="link_undecor" href="http://127.0.0.1:8000/doctors/by_age"> - By age</a></div>
+        <div class="HS_box"><a class="link_undecor" href="http://127.0.0.1:8000/doctors/by_sex"> - By sex</a></div>
+    </div>
     <div class="block_doc">
-
         {% for dc in object %}
             <div class="doc_info">
-            <ul>
-                <li>
-                    <img src="{{ dc.doctor.photo }}">
-                </li>
-                <br>
-                <li>
-                    <p style="font-family: 'Bebas Neue'; font-size: xx-large"><a class="link_undecor"
-                            href="{{ dc.doctor.get_absolute_url }}"> {{ dc.doctor.rang }} {{ dc.doctor.first_name }} {{ dc.doctor.last_name }}</a>
-                    </p>
-
-                    {% for doc in dc.hospital_department.all %}
-                        <li>
-                            <p style="font-family: 'Bebas Neue'; font-size: xx-large">{{ doc }} </p>
-                        </li>
-                    {% endfor %}
-                </li>
-            </ul>
-          </div>
+                <img class="Photo_id" src="{{ dc.doctor.photo }}">
+                <ul>
+                    <br>
+                    <li>
+                        <p style="font-family: 'Bebas Neue'; font-size: xx-large"><a class="link_undecor"
+                                                                                     href="{{ dc.doctor.get_absolute_url }}"> {{ dc.doctor.rang }} {{ dc.doctor.first_name }} {{ dc.doctor.last_name }}</a>
+                        </p>
+                        <br>
+                        {% for doc in dc.hospital_department.all %}
+                            <li type="disc">
+                                <p style="font-family: 'Bebas Neue'; font-size: xx-large">{{ doc }} </p>
+                            </li>
+                        {% endfor %}
+                    </li>
+                </ul>
+            </div>
         {% endfor %}
 
     </div>
     <div class="pagination">
     <span>
         {% if object.has_previous %}
-            <a  class="link_undecor" href="?page=1">&laquo; first</a>
-            <a  class="link_undecor" href="?page={{ object.previous_page_number }}">previous</a>
+            <a class="link_undecor" href="?page=1">&laquo; first</a>
+            <a class="link_undecor" href="?page={{ object.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">

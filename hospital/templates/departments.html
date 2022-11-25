@@ -1,10 +1,15 @@
 {% extends 'base_clinic.html' %}
 
 {% block content %}
+    <div style="display: flex; flex-direction: column;padding: 3%; justify-items: start ">
     {% for medic in objectM%}
+              <br>
         <ul>
-            <li ><p style="font-family: 'Bebas Neue'; font-size: xx-large"> <a href="{{ medic.get_absolute_url }}">{{ medic }}</a> </p></li>
+            <li type="disc" ><p style="font-family: 'Bebas Neue'; font-size: xx-large"> <a class="link_undecor" href="{{ medic.get_absolute_url }}">{{ medic }}</a> </p></li>
         </ul>
+        <br>
+        <br>
 
         {% endfor %}
-{% endblock %}
+    </div>
+{% endblock content %}
